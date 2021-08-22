@@ -13,13 +13,13 @@ namespace OTUS_Loops_Selection
             string outputString = OutputString(inputText, inputStringWidth);
             string firstChessString = FirstChessString(inputText, inputStringWidth);
             string secondChessString = SecondChessString(inputText, inputStringWidth);
+            
+            if (continuousBorder.Length > 40)
+                throw new Exception("Длина строки больше 40 символов");
 
             FirstBlock(continuousBorder, almostEmptyString, outputString, inputStringWidth);
             SecondBlock(continuousBorder, firstChessString, secondChessString, inputStringWidth);
             ThirdBlock(continuousBorder, continuousBorder.Length);
-
-            if (continuousBorder.Length > 40)
-                throw new Exception("Длина строки больше 40 символов");
 
             Console.ReadKey(true);
         }
