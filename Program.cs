@@ -81,28 +81,27 @@ namespace OTUS_Loops_Selection
         }
         private static string SecondChessString(string text, int n)
         {
-            string outputString = default;
             string auxiliaryString = default;
-            for (int i = 0; i < (text.Length + n * 2); i++)
+            for (int i = 0; i < (text.Length + n * 2 - 2); i++)
             {
                 if (i % 2 != 0)
                     auxiliaryString += "+";
                 else
                     auxiliaryString += " ";
             }
-            return outputString = "+" + auxiliaryString.Trim() + "+";
+            return "+" + auxiliaryString + "+";
         }
         private static string FirstChessString(string text, int n)
         {
             string outputString = default;
-            for (int i = 0; i < (text.Length + n * 2); i++)
+            for (int i = 0; i < (text.Length + n * 2 - 2); i++)
             {
                 if (i % 2 == 0)
                     outputString += "+";
                 else
                     outputString += " ";
             }
-            return outputString;
+            return "+" + outputString + "+";
         }
         private static string OutputString(string text, int n)
         {
